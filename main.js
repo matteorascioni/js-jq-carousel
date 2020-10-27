@@ -1,5 +1,7 @@
 
-// MEDIA QUERY DOCUMENT READY
+/*
+* DOCUMENT READY
+*/
 $(document).ready( function() {
 
     // Click frecce prev e next 
@@ -9,11 +11,24 @@ $(document).ready( function() {
 
     $('.prev').click( function() {
         slideImg('prev');
+    }); 
+
+    // KEYBOARD MOVEMENT 
+    $(document).keydown( function(event) {
+        if (event.keyCode === 37) {
+            slideImg('prev');
+        }  else if (event.keyCode === 39) {
+            slideImg('next');
+        }
     });
+
 })  // END READY  
 
+/**
+ * FUNCTIONS 
+ * */
 
-// FUNCTION  
+//  IMG/ICONS SLIDE NEXT/PREV FUNCTIONS
 function slideImg(direction) {
     var activeImg = $('.images img.active');
     var activeIcons = $('.nav i.active');
