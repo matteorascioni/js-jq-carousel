@@ -22,6 +22,7 @@
 }
 .slider-wrapper .images img {
     display: none;
+    max-width: 60%;
     height: 100%;
 }
 .slider-wrapper .images img.active {
